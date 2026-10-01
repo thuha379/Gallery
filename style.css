@@ -1,0 +1,271 @@
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+header {
+    background-color: #263238;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 20px;
+}
+
+
+/* =========================
+   2. SKIP LINK
+   position + focus
+========================= */
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+/* =========================
+   3. NAVIGATION
+   FLEX + multiple properties
+========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #546e7a;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.hero div {
+    flex: 1;
+}
+
+.hero img {
+    width: 45%;
+}
+
+
+/* =========================
+   BUTTON
+   HOVER EFFECT
+========================= */
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #37474f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: #546e7a;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.info-grid article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   4. IMAGE BOX MODEL
+   border + padding + radius
+========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #37474f;
+    padding: 8px;
+    border-radius: 15px;
+    display: block;
+}
+
+
+/* =========================
+   GALLERY FIGURES
+========================= */
+
+figure {
+    margin: 0;
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   8. NTH-CHILD
+========================= */
+
+.gallery-grid figure:nth-child(even) img {
+    border-radius: 50px 10px 50px 10px;
+}
+
+.gallery-grid figure:nth-child(odd) img {
+    border-radius: 10px 50px 10px 50px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contact-section div {
+    flex: 1;
+}
+
+.contact-section img {
+    width: 45%;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .hero,
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .hero img,
+    .contact-section img {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
